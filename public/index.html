@@ -35,9 +35,14 @@
 	royal purple: #6B3FA0;
 	old gold: #CFB53B;
 	-->
+
+
+	<!-- AgileCarousel -->
+	<link rel="stylesheet" href="Agile-Carousel-master/agile_carousel.css" type='text/css'>
+
 	<style type="text/css">
 		body { font-family:  "proxima-nova", "helvetica neue", helvetica, arial, geneva, sans-serif; margin: 0px; padding: 0px; background-color: #1B1B24; }
-		.NavBar{ width: 100%; height: inherit; position: fixed; z-index: 12; background-color: #1B1B24; padding-bottom: 10px; }
+		.NavBar{ width: 100%; height: inherit; position: fixed; z-index: 52; background-color: #1B1B24; padding-bottom: 10px; }
 		.NavBar div { width: 1024px; margin-left: auto; margin-right: auto;}
 		.NavBar .image { width: 60px; display: inline-block; }
 		.NavBar img { height: 60px; width: auto; }
@@ -50,9 +55,13 @@
 		.NavBar .NavContainer .bottomSpan { height: 30px; }
 		.MainBodyContent { width: 1024px; margin-left: auto; margin-right: auto; }
 		.MainBodyContent .bufferTop { height: 110px; width: 100%; }
+		.MainBodyContent .ImageDisplay .slideshow_wrapper .slideshow .agile_carousel { margin-left: auto; margin-right: auto; }
+		.MainBodyContent .ImageDisplay .slideshow_wrapper .slideshow .agile_carousel .slides .slide_inner .photo_link img { height: 400px;	width:auto }
+		.MainBodyContent .ImageDisplay .slideshow_wrapper .slideshow .agile_carousel .slides .slide_inner .photo_link { display: table; margin: 0 auto; }
 		.MainBodyContent .PageTitle { background-color: #464368; padding-top: 15px; padding-bottom:  15px; }
 		.MainBodyContent .PageTitle h2 { color: #FFF; margin:0px; margin-left: 20px; }
 		.MainBodyContent .PageContent h3, h4 { color: #7a7a8a; }
+
 	</style>
 
 	<!-- JavaScript
@@ -60,6 +69,27 @@
   	<!-- JQuery --><!--
   	<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script> -->
   	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+  	<!-- AgileCarousel -->
+  	<script src="Agile-Carousel-master/agile_carousel.a1.1.js"></script>
+  	<script>
+	    $.getJSON("Agile-Carousel-master/agile_carousel_data.php", function (data) {
+	        $(document).ready(function () {
+	            $("#basic_slideshow").agile_carousel({
+	                carousel_data: data,
+	                carousel_outer_height: 400,
+	                carousel_height: 220,
+	                slide_height: 400,
+	                carousel_outer_width: 900,
+	                slide_width: 900,
+	                transition_type: "fade",
+	                timer: 4000
+	            });
+	        });
+	    });
+	</script>
+
+
   	<!--
   	<script src="js/javascript.js" type="text/javascript"></script>
   	<script src="http://www.lewisritz.com/SubWebsitesOrPages/DorneyvilleBeverage/dbStuff/dataArrays.php" type="text/javascript"></script>
@@ -166,6 +196,7 @@
 </head>
 <!-- <body style="margin-left:0px; margin-right:0px; background-color:#000;"> 
 onclick="ScrollToElement(this)"
+agile_carousel.a1.1.min.js
 -->
 
 <body>
@@ -195,9 +226,14 @@ onclick="ScrollToElement(this)"
   	</div>
   	<div class="MainBodyContent">
   		<div class="bufferTop"></div>
-  		<div class="PageTitle" id="About"><h2>About</h2></div>
   		<div class="ImageDisplay">
+  			<div class="slideshow_wrapper">  
+			     <div class="slideshow" id="basic_slideshow">
+
+			     </div>
+			 </div>
 	  	</div>
+  		<div class="PageTitle" id="About"><h2>About</h2></div>
 	  	<div class="PageContent">
 	  		<h3>
 	  			HEADQUARTERED IN EVANSTON, IL, SIGMA ALPHA EPSILON WAS FOUNDED ON MARCH 9TH, 1856 AT THE UNIVERSITY OF ALABAMA TUSCALOOSA.  IT'S FOUNDERS WERE NOBLE LESLIE DEVOTIE, NATHAN ELAMS COCKRELL, JOHN BARRET RUDOLPH, JOHN WEBB KERR, SAMUEL MARION DENNIS, WADE HAMPTON FOSTER, ABNER EDWIN PATTON, AND THOMAS CHAPPELL COOK. UNDER THE DIRECTION OF DEVOTIE, THE RITUAL, SECRET HAND GRIP, AND THE NAME WAS CREATED. TODAY, OVER 307,000 BROTHERS HAVE BEEN INITIATED INTO OUR REALM. WITH OVER 228 CHAPTERS NATION WIDE, THERE IS ROUGHLY 14,000 CURRENT UNDERGRADUATE BROTHERS WITH OVER 190,000 LIVING ALUMNI AS WELL. SIGMA ALPHA EPSILON IS THE BIGGEST FRATERNITY CURRENTLY IN THE NATION.
