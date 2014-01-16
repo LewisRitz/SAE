@@ -36,18 +36,23 @@
 	old gold: #CFB53B;
 	-->
 	<style type="text/css">
-	body { font-family:  "proxima-nova", "helvetica neue", helvetica, arial, geneva, sans-serif; margin: 0px; padding: 0px; background-color: #1B1B24; }
-	.NavBar{ width: 100%; height: inherit; position: fixed; z-index: 12; background-color: #1B1B24; }
-	.NavBar div { width: 1200px; margin-left: auto; margin-right: auto;}
-	.NavBar h1, h3 { color:#7c76b8; display: inline-block; }
-	.NavBar h1 { margin-right: 60px; margin-bottom: 0px; margin-top: 8px; }
-	.NavBar h3 { color:#7a7a8a; margin-right: 10px; margin-bottom: 0px; }
-	.NavBar h2 { width: 1200px; color: #CFB53B; font-size: 20px; margin-top: 3px; }
-	.MainBodyContent { width: 1200px; margin-left: auto; margin-right: auto; }
-	.MainBodyContent .bufferTop { height: 110px; width: 100%; }
-	.MainBodyContent .PageTitle { background-color: #464368; padding-top: 15px; padding-bottom:  15px; }
-	.MainBodyContent .PageTitle h2 { color: #FFF; margin:0px; margin-left: 20px; }
-	.MainBodyContent .PageContent h3, h4 { color: #7a7a8a; }
+		body { font-family:  "proxima-nova", "helvetica neue", helvetica, arial, geneva, sans-serif; margin: 0px; padding: 0px; background-color: #1B1B24; }
+		.NavBar{ width: 100%; height: inherit; position: fixed; z-index: 12; background-color: #1B1B24; }
+		.NavBar div { width: 1024px; margin-left: auto; margin-right: auto;}
+		.NavBar .image { width: 60px; display: inline-block; }
+		.NavBar img { height: 60px; width: auto; }
+		.NavBar h1, h3 { color:#7c76b8; display: inline-block; }
+		.NavBar h1 { margin-right: 8px; margin-bottom: 0px; margin-top: 8px; width: 400px; }
+		.NavBar h3 { color:#7a7a8a; margin-right: 10px; margin-bottom: 0px; margin-top: 20px; vertical-align: top; }
+		.NavBar h2 { width: 1200px; color: #CFB53B; font-size: 20px; margin-top: 20px; }
+		.NavBar .NavContainer { height: 70px; width: 540px; margin-left: 0px; margin-right: 0px; display: inline-block; vertical-align: top; }
+		.NavBar .NavContainer .topSpan { height: 30px;}
+		.NavBar .NavContainer .bottomSpan { height: 30px; }
+		.MainBodyContent { width: 1024px; margin-left: auto; margin-right: auto; }
+		.MainBodyContent .bufferTop { height: 110px; width: 100%; }
+		.MainBodyContent .PageTitle { background-color: #464368; padding-top: 15px; padding-bottom:  15px; }
+		.MainBodyContent .PageTitle h2 { color: #FFF; margin:0px; margin-left: 20px; }
+		.MainBodyContent .PageContent h3, h4 { color: #7a7a8a; }
 	</style>
 
 	<!-- JavaScript
@@ -117,14 +122,23 @@
   ================================================== -->
   	<div class="NavBar">
   		<div>
+  			<div class="image">
+  				<img src="/images/Fleur-de-lis.gif">
+  			</div>
 			<h1>West Chester University Of Pennsylvania</h1>
-			<h3 onmouseover="NavBarRollon(this)" onmouseout="NavBarRolloff(this)" onclick="ScrollToElement(this)">About</h3>
-			<h3 onmouseover="NavBarRollon(this)" onmouseout="NavBarRolloff(this)" onclick="ScrollToElement(this)">Resources</h3>
-			<h3 onmouseover="NavBarRollon(this)" onmouseout="NavBarRolloff(this)" onclick="ScrollToElement(this)">Events</h3>
-			<h3 onmouseover="NavBarRollon(this)" onmouseout="NavBarRolloff(this)" onclick="ScrollToElement(this)">News</h3>
-			<h3 onmouseover="NavBarRollon(this)" onmouseout="NavBarRolloff(this)" onclick="ScrollToElement(this)">Rush</h3>
-			<h3 onmouseover="NavBarRollon(this)" onmouseout="NavBarRolloff(this)" onclick="ScrollToElement(this)">Contact</h3>
-			<h2>Sigma Alpha Epsilon</h2>
+			<div class="NavContainer">
+				<div class="topSpan">
+					<h3 onmouseover="NavBarRollon(this)" onmouseout="NavBarRolloff(this)" onclick="ScrollToElement(this)">About</h3>
+					<h3 onmouseover="NavBarRollon(this)" onmouseout="NavBarRolloff(this)" onclick="ScrollToElement(this)">Resources</h3>
+					<h3 onmouseover="NavBarRollon(this)" onmouseout="NavBarRolloff(this)" onclick="ScrollToElement(this)">Events</h3>
+					<h3 onmouseover="NavBarRollon(this)" onmouseout="NavBarRolloff(this)" onclick="ScrollToElement(this)">News</h3>
+					<h3 onmouseover="NavBarRollon(this)" onmouseout="NavBarRolloff(this)" onclick="ScrollToElement(this)">Rush</h3>
+					<h3 onmouseover="NavBarRollon(this)" onmouseout="NavBarRolloff(this)" onclick="ScrollToElement(this)">Contact</h3>
+				</div>
+				<div class="bottomSpan">
+					<h2>Sigma Alpha Epsilon</h2>
+				</div>
+			</div>
 		</div>
   	</div>
   	<div class="MainBodyContent">
