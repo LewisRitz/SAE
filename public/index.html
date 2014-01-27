@@ -370,6 +370,25 @@
 
 	</script>
 
+	<!-- AgileCarousel -->
+	<script src="Agile-Carousel-master/agile_carousel.a1.1.js"></script>
+  	<script>
+	    $.getJSON("Agile-Carousel-master/agile_carousel_data.php", function (data) {
+	        $(document).ready(function () {
+	            $("#basic_slideshow").agile_carousel({
+	                carousel_data: data,
+	                carousel_outer_height: 450,
+	                carousel_height: 220,
+	                slide_height: 400,
+	                carousel_outer_width: 900,
+	                slide_width: 900,
+	                transition_type: "fade",
+	                timer: 4000
+	            });
+	        });
+	    });
+	</script>
+
 
 	<!-- CSS
   ================================================== -->
@@ -542,7 +561,6 @@
   		<div class="ImageDisplay">
   			<div class="slideshow_wrapper">  
 			     <div class="slideshow" id="basic_slideshow">
-
 			     </div>
 			 </div>
 	  	</div>
