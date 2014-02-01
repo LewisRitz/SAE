@@ -89,7 +89,17 @@
 	}
 
 	#calendar .ui-cal-dateline, .ui-cal-dateline-fill { width: 963px !important; margin-top: 100px; position: absolute;}
-	#calendar .ui-cal-wrapper { width: 963px; height:400px; margin-top: 100px; position: absolute;}
-	#calendar .ui-cal-timeline { height:400px; margin-top: 100px; position: absolute; }
+	#calendar .ui-cal-wrapper { width: 963px; height:600px; margin-top: 100px; position: absolute;}
+	#calendar .ui-cal-timeline { height:600px; margin-top: 100px; position: absolute; }
 	#controls {  margin-top: 50px; margin-left: 50px; position: static; }
 	#OutWrapperLEW { position: absolute; }
+
+
+
+
+
+
+
+	#nothing {
+
+	}
